@@ -1,0 +1,247 @@
+/* style.css */
+body {
+    font-family: "Noto Serif KR", "Nanum Myeongjo", "Source Han Serif KR", "AppleMyungjo", "Batang", serif;
+    margin: 0;
+    padding-top: 60px; /* Space for the fixed header */
+    background-color: #f9f7f4;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #898269;
+    color: #fcfcfc;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Slightly larger for larger screens */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem; /* Increased margin for navigation items */
+}
+
+nav ul li a {
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1rem; /* Slightly larger navigation links */
+}
+
+nav ul li a:hover {
+    color: #d1d8e0;
+}
+
+main {
+    padding: 0;
+}
+
+/* Changed max-width to allow content to be wider on larger screens */
+#main-portfolio,
+.portfolio-section,
+#contact {
+    background-color: #ffffff;
+    padding: 2.5rem; /* Increased padding for more breathing room */
+    margin-bottom: 2.5rem; /* Increased bottom margin */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    /* Adjusted max-width to suit 1920px screen better.
+       1200px leaves good margins on a 1920px screen while allowing more content. */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-portfolio-content,
+.portfolio-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-portfolio-content h2,
+.portfolio-content h3 {
+    color: #333333;
+    font-size: 2.2rem; /* Larger headings for better impact on big screens */
+    margin-bottom: 1.5rem; /* More space below headings */
+}
+
+.main-portfolio-content p,
+.portfolio-content p {
+    color: #6d6d6d;
+    margin-bottom: 1.5rem; /* More space below paragraphs */
+    font-size: 1.1rem; /* Slightly larger text for readability */
+}
+
+.main-portfolio-content a,
+.portfolio-content a {
+    display: inline-block;
+    background-color: #eae5d0;
+    color: #5d5d5d;
+    padding: 0.7rem 1.4rem; /* Slightly larger buttons */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Make button text bolder */
+}
+
+.main-portfolio-content a:hover {
+    background-color: #e8daa9;
+}
+
+.main-portfolio-image,
+.portfolio-image {
+    margin-top: 1.5rem; /* Increased margin above images */
+}
+
+.main-portfolio-image img,
+.portfolio-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added a subtle shadow to images */
+}
+
+#contact h2 {
+    color: #333333;
+    font-size: 2.2rem; /* Consistent heading size */
+}
+
+#contact p {
+    color: #6d6d6d;
+    margin-bottom: 1rem;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 0.8rem; /* More space between contact items */
+    color: #5a5a5a;
+    font-size: 1.1rem; /* Consistent font size */
+}
+
+footer {
+    background-color: #898269;
+    color: #fcfcfc;
+    text-align: center;
+    padding: 1.5rem 0; /* Increased footer padding */
+    font-size: 0.9rem; /* Slightly larger footer text */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1280px) { /* Adjust for screens narrower than 1920px but still large */
+    #main-portfolio,
+    .portfolio-section,
+    #contact {
+        max-width: 960px; /* Slightly reduce max-width for medium-large screens */
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 0;
+    }
+    body {
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .main-portfolio-content,
+    .portfolio-content {
+        text-align: left; /* Text aligns left on smaller screens for better readability */
+    }
+
+    .main-portfolio-content h2,
+    .portfolio-content h3 {
+        font-size: 1.8rem; /* Smaller headings on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    .main-portfolio-content p,
+    .portfolio-content p {
+        font-size: 1rem; /* Smaller text on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    .main-portfolio-content a,
+    .portfolio-content a {
+        padding: 0.4rem 0.8rem; /* Smaller buttons */
+    }
+
+    .main-portfolio-image,
+    .portfolio-image {
+        margin-top: 1rem;
+    }
+
+    #main-portfolio,
+    .portfolio-section,
+    #contact {
+        max-width: 100%;
+        border-radius: 0;
+        padding: 1.5rem; /* Reduced padding on smaller screens */
+        margin-bottom: 1.5rem;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    #contact ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) { /* Further adjustments for very small screens (phones) */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    .main-portfolio-content h2,
+    .portfolio-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .main-portfolio-content p,
+    .portfolio-content p {
+        font-size: 0.95rem;
+    }
+
+    #main-portfolio,
+    .portfolio-section,
+    #contact {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+        font-size: 0.75rem;
+    }
+}
